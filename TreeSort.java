@@ -4,8 +4,8 @@ import java.util.concurrent.TimeUnit;
 class TreeSort  
 { 
 	static final int SMALLEST_SIZE = 10;
-	static final int LARGEST_SIZE = 100000;
-	static final int ITERATIONS = 1000;
+	static final int LARGEST_SIZE = 10000;
+	static final int ITERATIONS = 10000;
 	
     class Node  
     { 
@@ -79,7 +79,7 @@ class TreeSort
 			{
 				int arr[] = new int[size];
 				for (int j = 0; j < size; j++)
-					arr[j] = rand.nextInt(200)-100;
+					arr[j] = rand.nextInt(10000)-5000;
 				
 				long startTime = System.nanoTime();
 				TreeSort tree = new TreeSort();
