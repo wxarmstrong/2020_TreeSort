@@ -14,7 +14,7 @@ class TreeSort
         public Node(int k)
         { 
             key = k;
-            left = null;
+			left = null;
 			right = null;
         } 
     } 
