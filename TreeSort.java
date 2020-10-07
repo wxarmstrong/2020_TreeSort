@@ -1,4 +1,26 @@
 /*
+William Armstrong
+CS 3310
+Cal Poly Pomona
+Fall 2020
+10/07/2020
+
+Runtimes
+-------------------------------------------
+10 items:
+Avg time: 15227ns = 0.015227ms
+100 items:
+Avg time: 16116ns = 0.016116ms
+1000 items:
+Avg time: 163708ns = 0.163708ms
+10000 items:
+Avg time: 1871159ns = 1.871159ms
+100000 items:
+Avg time: 35203938ns = 35.203938ms
+1000000 items:
+Avg time: 933637137ns = 933.637137ms
+-------------------------------------------
+
 TreeSort
 An algorithm for sorting integer arrays by
 constructing a binary tree from its members
@@ -19,7 +41,9 @@ W(n) = W(n-1) + n
 W(1) = 1
 Which is a simple summation of 1...n, or
 
-W(n) = n(n+1)/2 = O(n^2)  
+W(n) = n(n+1)
+       ------ = O(n^2)
+	     2   
 
 BEST-CASE:
 In the best case, the tree will stay balanced the entire time that items
@@ -65,8 +89,7 @@ A(n-1) + ceil(lg n) + 1 >= A(n-1) + lg n + 1
 = lg(n!) + n
 = O(n lg n) [Stirling's approximation]
 
-For an unbalanced tree, the average-case is more difficult to determine due to the inconsistent height & structure of random binary trees.
-If the average height of a binary tree of n nodes is taken to be sqrt(n) [http://www.dtc.umn.edu/~odlyzko/doc/arch/extreme.heights.pdf] then
+For an unbalanced tree, the average-case is more difficult to determine due to the inconsistent height & structure of random binary trees. If the average height of a binary tree of n nodes is taken to be sqrt(n) [http://www.dtc.umn.edu/~odlyzko/doc/arch/extreme.heights.pdf] then
 A(1) = 1
 A(n) <= A(n-1) + ceil(sqrt(n))
 <= A(n-1) + sqrt(n) + 1
@@ -207,7 +230,7 @@ class TreeSort
 				totalTime += endTime - startTime;
 			}
 			long avgTime = totalTime / ITERATIONS;
-			System.out.println("Avg time: " + avgTime/1000 + "ms");
+			System.out.println("Avg time: " + avgTime + "ns = " + avgTime/1000000.0 + "ms");
 		}
     } 
 	// end main
