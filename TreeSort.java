@@ -19,9 +19,7 @@ W(n) = W(n-1) + n
 W(1) = 1
 Which is a simple summation of 1...n, or
 
-W(n) = n(n+1)
-       ------ = O(n^2)
-	     2   
+W(n) = n(n+1)/2 = O(n^2)  
 
 BEST-CASE:
 In the best case, the tree will stay balanced the entire time that items
@@ -67,7 +65,8 @@ A(n-1) + ceil(lg n) + 1 >= A(n-1) + lg n + 1
 = lg(n!) + n
 = O(n lg n) [Stirling's approximation]
 
-For an unbalanced tree, the average-case is more difficult to determine due to the inconsistent height & structure of random binary trees. If the average height of a binary tree of n nodes is taken to be sqrt(n) [http://www.dtc.umn.edu/~odlyzko/doc/arch/extreme.heights.pdf] then
+For an unbalanced tree, the average-case is more difficult to determine due to the inconsistent height & structure of random binary trees.
+If the average height of a binary tree of n nodes is taken to be sqrt(n) [http://www.dtc.umn.edu/~odlyzko/doc/arch/extreme.heights.pdf] then
 A(1) = 1
 A(n) <= A(n-1) + ceil(sqrt(n))
 <= A(n-1) + sqrt(n) + 1
