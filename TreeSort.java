@@ -1,10 +1,4 @@
 /*
-William Armstrong
-CS 3310
-Cal Poly Pomona
-Fall 2020
-10/07/2020
-
 TreeSort
 An algorithm for sorting integer arrays by
 constructing a binary tree from its members
